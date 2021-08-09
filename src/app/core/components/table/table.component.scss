@@ -1,0 +1,37 @@
+.container {
+  height: 90vh;
+  width: 90vw;
+  margin-top: 10px;
+  padding: 0%;
+}
+
+.header {
+  height: 15%;
+}
+
+.table-header {
+  display: flex;
+}
+
+.table-body {
+  margin-top: 20px;
+}
+
+span {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+}
+
+input {
+  width: 25rem;
+}
+
+button {
+  margin-left: 10px;
+  padding: 20px;
+}
+
+.container .header .search-button {
+  margin: 10px;
+}
+

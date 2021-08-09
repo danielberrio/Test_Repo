@@ -1,0 +1,47 @@
+<!-- Filter & Search button -->
+<div class="container">
+  <div class="header">
+    <p-card class="filter-card">
+      <span>  What are you looking for? </span>
+      <br>
+      <span class="p-input-icon-left">
+        <i class="pi pi-search"></i>
+        <input type="text" pInputText placeholder="Search for name, gender, email or post" [(ngModel)]="searchInput">
+      </span>
+      <p-button class="search-button" label="Search" icon="pi pi-search" [loading]="loading" (click)="getFilter()"></p-button>
+      <p-button class="clear-button" label="Clear Filter" icon="pi pi-filter-slash" (click)="clearFilter()">
+      </p-button>
+    </p-card>
+  </div>
+
+  <!-- Table -->
+  <div class="table-body">
+    <p-card class="table-card">
+
+      <!-- Table Body -->
+      <p-table [value]="filteredData" styleClass="p-datatable-striped"
+      paginatorPosition="top" [paginator]="true" [rows]="2" [rowsPerPageOptions]="[2,10,15]">
+        <ng-template pTemplate="caption" class="table-header">
+          Posts Summery
+      </ng-template>
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Author</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Post</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-post>
+          <tr>
+            <td>{{post.author}}</td>
+            <td>{{post.gender}}</td>
+            <td>{{post.email}}</td>
+            <td>{{post.post}}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+
+    </p-card>
+  </div>
+</div>
